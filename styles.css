@@ -1,0 +1,15 @@
+
+/* Scheduling Section */
+h5 + input {
+    display: none;
+}
+
+.selection {
+    padding: 0;
+    margin: 0;
+    border: 1px solid transparent;
+}
+
+input:checked + label {
+    background: lightblue;
+}
