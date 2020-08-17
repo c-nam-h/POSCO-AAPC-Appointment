@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+  <!-- Header Section -->
+  <%- include("partials/header"); -%>
+  <body>
+    <!-- Nabvar Section -->
+    <%- include("partials/navbar"); -%>
+
+    <!-- Body Section -->
+    <div class="pricing-header px-3 py-3 pt-md-5 pb-md-4 mx-auto text-center">
+      <h1 class="display-4">Scheduling Appointments</h1>
+      <p class="lead">
+        Please select what you need to schedule an appointment for and type of
+        truck you will be using
+      </p>
+    </div>
+
+    <div class="container">
+      <form action="/scheduling-appointment" method="post">
+        <div class="card-deck mb-3 text-center">
+          <div class="card mb-4 shadow-sm">
+            <!-- <img src="..." class="card-img-top" alt="..."> -->
+            <label class="btn btn-default btn-selection" for="delivery">
+              <div class="card-body">
+                <h5 class="card-title">Delivery</h5>
+                <input
+                  id="delivery"
+                  type="radio"
+                  name="task"
+                  value="delivery"
+                  required
+                />
+                <p class="card-text">
+                  This is a longer card with supporting text below as a natural
+                  lead-in to additional content. This content is a little bit
+                  longer.
+                </p>
+              </div>
+            </label>
+          </div>
+          <div class="card mb-4 shadow-sm">
+            <!-- <img src="..." class="card-img-top" alt="..."> -->
+            <label class="btn btn-default btn-selection" for="pickup">
+              <div class="card-body">
+                <h5 class="card-title">Pick Up</h5>
+                <input
+                  id="pickup"
+                  type="radio"
+                  name="task"
+                  value="pickup"
+                  required
+                />
+                <p class="card-text">
+                  This is a longer card with supporting text below as a natural
+                  lead-in to additional content. This content is a little bit
+                  longer.
+                </p>
+              </div>
+            </label>
+          </div>
+        </div>
+
+        <div class="card-deck mb-3 text-center">
+          <div class="card mb-4 shadow-sm">
+            <!-- <img src="..." class="card-img-top" alt="..."> -->
+            <label class="btn btn-default btn-selection" for="flatbed">
+              <div class="card-body">
+                <h5 class="card-title">Flatbed</h5>
+                <input
+                  id="flatbed"
+                  type="radio"
+                  name="truck"
+                  value="flatbed"
+                  required
+                />
+                <p class="card-text">
+                  This is a longer card with supporting text below as a natural
+                  lead-in to additional content. This content is a little bit
+                  longer.
+                </p>
+              </div>
+            </label>
+          </div>
+          <div class="card mb-4 shadow-sm">
+            <!-- <img src="..." class="card-img-top" alt="..."> -->
+            <label class="btn btn-default btn-selection" for="dryvan">
+              <div class="card-body">
+                <h5 class="card-title">Dry Van</h5>
+                <input
+                  id="dryvan"
+                  type="radio"
+                  name="truck"
+                  value="dryvan"
+                  required
+                />
+                <p class="card-text">
+                  This is a longer card with supporting text below as a natural
+                  lead-in to additional content. This content is a little bit
+                  longer.
+                </p>
+              </div>
+            </label>
+          </div>
+        </div>
+
+        <button class="btn btn-lg btn-primary btn-block">Next</button>
+      </form>
+
+      <!-- Footer Section -->
+      <%- include("partials/footer"); -%>
+    </div>
+
+    <%- include("partials/scripts"); -%>
+  </body>
+</html>

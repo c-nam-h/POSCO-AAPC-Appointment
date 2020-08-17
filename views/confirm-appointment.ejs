@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+  <!-- Header Section -->
+  <%- include("partials/header"); -%>
+  <body>
+    <!-- Nabvar Section -->
+    <%- include("partials/navbar"); -%>
+
+    <!-- Body Section -->
+    <div class="pricing-header px-3 py-3 pt-md-5 pb-md-4 mx-auto text-center">
+      <h1 class="display-4">Scheduling Appointments</h1>
+      <p class="lead">
+        Please fill out additional information for your appointment
+      </p>
+    </div>
+
+    <div class="container">
+      <form action="/confirm-appointment" method="post">
+        <div class="row">
+          <div class="appointment-info col-lg-4 col-md-12">
+            <label for="carrier">Carrier</label>
+            <input
+              class="form-control"
+              id="carrier"
+              name="carrier"
+              type="text"
+              required
+            />
+            <label for="releaseNo">Release #</label>
+            <input
+              class="form-control"
+              id="releaseNo"
+              type="text"
+              name="releaseNo"
+              placeholder="Release #"
+              required
+            />
+            <label for="destination">Destination</label>
+            <input
+              class="form-control"
+              id="destination"
+              type="text"
+              name="destination"
+              placeholder="Destination"
+              required
+            />
+            <label for="truckNo">Truck #</label>
+            <input
+              class="form-control"
+              id="truckNo"
+              type="text"
+              name="truckNo"
+              placeholder="Truck #"
+              required
+            />
+          </div>
+
+          <div class="slideshow-container col-lg-8 col-md-12">
+            <div class="wrapper">
+              <div class="mySlides">
+                <% for (var i = 13; 7 <= i; i--) { %>
+                <div class="text-appointment-info">
+                  <div class="margin-bottom-1">
+                    <%= daysOfTwoWeeks[i].toDateString().slice(0, 3) %>
+                    <br />
+                    <%= daysOfTwoWeeks[i].toDateString().slice(4, 7) %> <%=
+                    daysOfTwoWeeks[i].getDate() %> <% for (var k = 0; k <
+                    appointmentTimesSectionA.length; k++) { %>
+                    <div>
+                      <label
+                        class="btn btn-default btn-selection test"
+                        test="yes"
+                        for="appointmentTimeRadioButton<%= i %><%= k %>"
+                      >
+                        <input
+                          id="appointmentTimeRadioButton<%= i %><%= k %>"
+                          type="radio"
+                          name="appointmentTimeSelect"
+                          value="<%= appointmentTimesSectionA[k] %> <%= daysOfTwoWeeks[i].toDateString().slice(4, 16) %>"
+                        /><%= appointmentTimesSectionA[k] %>
+                      </label>
+                    </div>
+                    <% } %>
+                  </div>
+                </div>
+                <% } %>
+              </div>
+              <div class="mySlides">
+                <% for (var i = 6; 0 <= i; i--) { %>
+                <div class="text-appointment-info">
+                  <div class="margin-bottom-1">
+                    <%= daysOfTwoWeeks[i].toDateString().slice(0, 3) %>
+                    <br />
+                    <%= daysOfTwoWeeks[i].toDateString().slice(4, 7) %> <%=
+                    daysOfTwoWeeks[i].getDate() %> <% for (var k = 0; k <
+                    appointmentTimesSectionA.length; k++) { %>
+                    <div>
+                      <label
+                        class="btn btn-default btn-selection test"
+                        test="yes"
+                        for="appointmentTimeRadioButton<%= i %><%= k %>"
+                      >
+                        <% if (appointmentTimesSectionA[k].slice(0, 2) > 12) {
+                        %>
+                        <input
+                          id="appointmentTimeRadioButton<%= i %><%= k %>"
+                          type="radio"
+                          name="appointmentTimeSelect"
+                          value="<%= appointmentTimesSectionA[k] %> <%= daysOfTwoWeeks[i].toDateString().slice(4, 16) %>"
+                        /><%= appointmentTimesSectionA[k].slice(0, 2) - 12
+                        %>:<%= appointmentTimesSectionA[k].slice(3, 5) %>PM <% }
+                        else { %>
+                        <input
+                          id="appointmentTimeRadioButton<%= i %><%= k %>"
+                          type="radio"
+                          name="appointmentTimeSelect"
+                          value="<%= appointmentTimesSectionA[k] %> <%= daysOfTwoWeeks[i].toDateString().slice(4, 16) %>"
+                        /><%= appointmentTimesSectionA[k] %>AM <% } %>
+                      </label>
+                    </div>
+                    <% } %>
+                  </div>
+                </div>
+                <% } %>
+              </div>
+              <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+              <a class="next" onclick="plusSlides(1)">&#10095;</a>
+            </div>
+          </div>
+        </div>
+
+        <button
+          class="btn btn-lg btn-primary btn-block"
+          name="category"
+          value="<%= category %>"
+        >
+          Confirm Appointment
+        </button>
+      </form>
+
+      <!-- Footer Section -->
+      <%- include("partials/footer"); -%>
+    </div>
+
+    <%- include("partials/scripts"); -%>
+  </body>
+</html>

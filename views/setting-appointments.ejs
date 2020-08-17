@@ -1,0 +1,546 @@
+<!DOCTYPE html>
+<html lang="en">
+  <!-- Header Section -->
+  <%- include("partials/header"); -%>
+  <body>
+    <!-- Nabvar Section -->
+    <%- include("partials/navbar-setting"); -%>
+
+    <!-- Sidebar Navigation -->
+    <div class="sidenav">
+      <a href="/setting">Home</a>
+      <a class="active" href="/setting-appointments">Appointments</a>
+      <a href="#">Announcement</a>
+    </div>
+
+    <div class="setting-wrapper">
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-lg-10 col-md-10 col-sm-12">
+            <!-- Body Section -->
+            <form action="#" method="get" id="appointment-form">
+              <div class="row">
+                <div class="appointment-info col-lg-4 col-md-12">
+                  <label for="section">Section</label>
+                  <select class="form-control" name="section" id="section">
+                    <option value="">Please Select a Section</option>
+                    <option value="a">Section A</option>
+                    <option value="a2">Section A2</option>
+                    <option value="b">Section B</option>
+                    <option value="b2">Section B2</option>
+                    <option value="c">Section C</option>
+                    <option value="c2">Section C2</option>
+                  </select>
+                  <label for="noAppointmentFrom">No Appointment: From</label>
+                  <input
+                    class="form-control"
+                    id="noAppointmentFrom"
+                    type="date"
+                    name="releaseNo"
+                  />
+                  <label for="noAppointmentFrom">No Appointment: To</label>
+                  <input
+                    class="form-control"
+                    id="noAppointmentTo"
+                    type="date"
+                    name="releaseNo"
+                  />
+                  <label for="destination">Destination</label>
+                  <input
+                    class="form-control"
+                    id="destination"
+                    type="text"
+                    name="destination"
+                    placeholder="Destination"
+                    required
+                  />
+                  <label for="truckNo">Truck #</label>
+                  <input
+                    class="form-control"
+                    id="truckNo"
+                    type="text"
+                    name="truckNo"
+                    placeholder="Truck #"
+                    required
+                  />
+                </div>
+
+                <div class="slideshow-container col-lg-8 col-md-12">
+                  <div class="wrapper">
+                    <!-- Full-width images with number and caption text -->
+                    <div class="mySlides">
+                      <div class="text-appointment-info">
+                        <div>
+                          Mon
+                        </div>
+                        <div>
+                          Jul 6
+                        </div>
+                        <br />
+                        <div>
+                          <a class="test" href="#">06:00AM</a>
+                        </div>
+                        <div>
+                          <a class="test" href="#">07:00AM</a>
+                        </div>
+                        <div>
+                          <a class="test" href="#">08:00AM</a>
+                        </div>
+                        <div>
+                          <a class="test" href="#">09:00AM</a>
+                        </div>
+                        <div>
+                          <a class="test" href="#">10:00AM</a>
+                        </div>
+                        <div>
+                          <a class="test" href="#">11:00AM</a>
+                        </div>
+                        <div>
+                          <a class="test" href="#">01:00PM</a>
+                        </div>
+                        <div>
+                          <a class="test" href="#">02:00PM</a>
+                        </div>
+                        <div>
+                          <a class="test" href="#">03:00PM</a>
+                        </div>
+                        <div>
+                          <a class="test" href="#">04:00PM</a>
+                        </div>
+                        <div>
+                          <a class="test" href="#">05:00PM</a>
+                        </div>
+                        <div>
+                          <a class="test" href="#">07:00PM</a>
+                        </div>
+                        <div>
+                          <a class="test" href="#">08:00PM</a>
+                        </div>
+                      </div>
+                      <div class="text-appointment-info">
+                        <div>
+                          Mon
+                        </div>
+                        <div>
+                          Jul 6
+                        </div>
+                        <br />
+                        <div>
+                          <a class="test" href="#">06:00AM</a>
+                        </div>
+                        <div>
+                          <a class="test" href="#">07:00AM</a>
+                        </div>
+                        <div>
+                          <a class="test" href="#">08:00AM</a>
+                        </div>
+                        <div>
+                          <a class="test" href="#">09:00AM</a>
+                        </div>
+                        <div>
+                          <a class="test" href="#">10:00AM</a>
+                        </div>
+                        <div>
+                          <a class="test" href="#">11:00AM</a>
+                        </div>
+                        <div>
+                          <a class="test" href="#">01:00PM</a>
+                        </div>
+                        <div>
+                          <a class="test" href="#">02:00PM</a>
+                        </div>
+                        <div>
+                          <a class="test" href="#">03:00PM</a>
+                        </div>
+                        <div>
+                          <a class="test" href="#">04:00PM</a>
+                        </div>
+                        <div>
+                          <a class="test" href="#">05:00PM</a>
+                        </div>
+                        <div>
+                          <a class="test" href="#">07:00PM</a>
+                        </div>
+                        <div>
+                          <a class="test" href="#">08:00PM</a>
+                        </div>
+                      </div>
+                      <div class="text-appointment-info">
+                        <div>
+                          Mon
+                        </div>
+                        <div>
+                          Jul 6
+                        </div>
+                        <br />
+                        <div>
+                          <a class="test" href="#">06:00AM</a>
+                        </div>
+                        <div>
+                          <a class="test" href="#">07:00AM</a>
+                        </div>
+                        <div>
+                          <a class="test" href="#">08:00AM</a>
+                        </div>
+                        <div>
+                          <a class="test" href="#">09:00AM</a>
+                        </div>
+                        <div>
+                          <a class="test" href="#">10:00AM</a>
+                        </div>
+                        <div>
+                          <a class="test" href="#">11:00AM</a>
+                        </div>
+                        <div>
+                          <a class="test" href="#">01:00PM</a>
+                        </div>
+                        <div>
+                          <a class="test" href="#">02:00PM</a>
+                        </div>
+                        <div>
+                          <a class="test" href="#">03:00PM</a>
+                        </div>
+                        <div>
+                          <a class="test" href="#">04:00PM</a>
+                        </div>
+                        <div>
+                          <a class="test" href="#">05:00PM</a>
+                        </div>
+                        <div>
+                          <a class="test" href="#">07:00PM</a>
+                        </div>
+                        <div>
+                          <a class="test" href="#">08:00PM</a>
+                        </div>
+                      </div>
+                      <div class="text-appointment-info">
+                        <div>
+                          Mon
+                        </div>
+                        <div>
+                          Jul 6
+                        </div>
+                        <br />
+                        <div>
+                          <a class="test" href="#">06:00AM</a>
+                        </div>
+                        <div>
+                          <a class="test" href="#">07:00AM</a>
+                        </div>
+                        <div>
+                          <a class="test" href="#">08:00AM</a>
+                        </div>
+                        <div>
+                          <a class="test" href="#">09:00AM</a>
+                        </div>
+                        <div>
+                          <a class="test" href="#">10:00AM</a>
+                        </div>
+                        <div>
+                          <a class="test" href="#">11:00AM</a>
+                        </div>
+                        <div>
+                          <a class="test" href="#">01:00PM</a>
+                        </div>
+                        <div>
+                          <a class="test" href="#">02:00PM</a>
+                        </div>
+                        <div>
+                          <a class="test" href="#">03:00PM</a>
+                        </div>
+                        <div>
+                          <a class="test" href="#">04:00PM</a>
+                        </div>
+                        <div>
+                          <a class="test" href="#">05:00PM</a>
+                        </div>
+                        <div>
+                          <a class="test" href="#">07:00PM</a>
+                        </div>
+                        <div>
+                          <a class="test" href="#">08:00PM</a>
+                        </div>
+                      </div>
+                      <div class="text-appointment-info">
+                        <div>
+                          Mon
+                        </div>
+                        <div>
+                          Jul 6
+                        </div>
+                        <br />
+                        <div>
+                          <a class="test" href="#">06:00AM</a>
+                        </div>
+                        <div>
+                          <a class="test" href="#">07:00AM</a>
+                        </div>
+                        <div>
+                          <a class="test" href="#">08:00AM</a>
+                        </div>
+                        <div>
+                          <a class="test" href="#">09:00AM</a>
+                        </div>
+                        <div>
+                          <a class="test" href="#">10:00AM</a>
+                        </div>
+                        <div>
+                          <a class="test" href="#">11:00AM</a>
+                        </div>
+                        <div>
+                          <a class="test" href="#">01:00PM</a>
+                        </div>
+                        <div>
+                          <a class="test" href="#">02:00PM</a>
+                        </div>
+                        <div>
+                          <a class="test" href="#">03:00PM</a>
+                        </div>
+                        <div>
+                          <a class="test" href="#">04:00PM</a>
+                        </div>
+                        <div>
+                          <a class="test" href="#">05:00PM</a>
+                        </div>
+                        <div>
+                          <a class="test" href="#">07:00PM</a>
+                        </div>
+                        <div>
+                          <a class="test" href="#">08:00PM</a>
+                        </div>
+                      </div>
+                      <div class="text-appointment-info">
+                        <div>
+                          Mon
+                        </div>
+                        <div>
+                          Jul 6
+                        </div>
+                        <br />
+                        <div>
+                          <a class="test" href="#">06:00AM</a>
+                        </div>
+                        <div>
+                          <a class="test" href="#">07:00AM</a>
+                        </div>
+                        <div>
+                          <a class="test" href="#">08:00AM</a>
+                        </div>
+                        <div>
+                          <a class="test" href="#">09:00AM</a>
+                        </div>
+                        <div>
+                          <a class="test" href="#">10:00AM</a>
+                        </div>
+                        <div>
+                          <a class="test" href="#">11:00AM</a>
+                        </div>
+                        <div>
+                          <a class="test" href="#">01:00PM</a>
+                        </div>
+                        <div>
+                          <a class="test" href="#">02:00PM</a>
+                        </div>
+                        <div>
+                          <a class="test" href="#">03:00PM</a>
+                        </div>
+                        <div>
+                          <a class="test" href="#">04:00PM</a>
+                        </div>
+                        <div>
+                          <a class="test" href="#">05:00PM</a>
+                        </div>
+                        <div>
+                          <a class="test" href="#">07:00PM</a>
+                        </div>
+                        <div>
+                          <a class="test" href="#">08:00PM</a>
+                        </div>
+                      </div>
+                      <div class="text-appointment-info">
+                        <div>
+                          Mon
+                        </div>
+                        <div>
+                          Jul 6
+                        </div>
+                        <br />
+                        <div>
+                          <a class="test" href="#">06:00AM</a>
+                        </div>
+                        <div>
+                          <a class="test" href="#">07:00AM</a>
+                        </div>
+                        <div>
+                          <a class="test" href="#">08:00AM</a>
+                        </div>
+                        <div>
+                          <a class="test" href="#">09:00AM</a>
+                        </div>
+                        <div>
+                          <a class="test" href="#">10:00AM</a>
+                        </div>
+                        <div>
+                          <a class="test" href="#">11:00AM</a>
+                        </div>
+                        <div>
+                          <a class="test" href="#">01:00PM</a>
+                        </div>
+                        <div>
+                          <a class="test" href="#">02:00PM</a>
+                        </div>
+                        <div>
+                          <a class="test" href="#">03:00PM</a>
+                        </div>
+                        <div>
+                          <a class="test" href="#">04:00PM</a>
+                        </div>
+                        <div>
+                          <a class="test" href="#">05:00PM</a>
+                        </div>
+                        <div>
+                          <a class="test" href="#">07:00PM</a>
+                        </div>
+                        <div>
+                          <a class="test" href="#">08:00PM</a>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="mySlides">
+                      <div class="text-appointment-info">
+                        <div>
+                          Mon
+                        </div>
+                        <div>
+                          Jul 13
+                        </div>
+                      </div>
+                      <div class="text-appointment-info">
+                        <div>
+                          Tue
+                        </div>
+                        <div>
+                          Jul 14
+                        </div>
+                      </div>
+                      <div class="text-appointment-info">
+                        <div>
+                          Wed
+                        </div>
+                        <div>
+                          Jul 15
+                        </div>
+                      </div>
+                      <div class="text-appointment-info">
+                        <div>
+                          Thu
+                        </div>
+                        <div>
+                          Jul 16
+                        </div>
+                      </div>
+                      <div class="text-appointment-info">
+                        <div>
+                          Fri
+                        </div>
+                        <div>
+                          Jul 17
+                        </div>
+                      </div>
+                      <div class="text-appointment-info">
+                        <div>
+                          Sat
+                        </div>
+                        <div>
+                          Jul 18
+                        </div>
+                      </div>
+                      <div class="text-appointment-info">
+                        <div>
+                          Sun
+                        </div>
+                        <div>
+                          Jul 19
+                        </div>
+                      </div>
+                    </div>
+                    <div class="mySlides">
+                      <div class="text-appointment-info">
+                        <div>
+                          Mon
+                        </div>
+                        <div>
+                          Jul 19
+                        </div>
+                      </div>
+                      <div class="text-appointment-info">
+                        <div>
+                          Tue
+                        </div>
+                        <div>
+                          Jul 20
+                        </div>
+                      </div>
+                      <div class="text-appointment-info">
+                        <div>
+                          Wed
+                        </div>
+                        <div>
+                          Jul 21
+                        </div>
+                      </div>
+                      <div class="text-appointment-info">
+                        <div>
+                          Thu
+                        </div>
+                        <div>
+                          Jul 22
+                        </div>
+                      </div>
+                      <div class="text-appointment-info">
+                        <div>
+                          Fri
+                        </div>
+                        <div>
+                          Jul 23
+                        </div>
+                      </div>
+                      <div class="text-appointment-info">
+                        <div>
+                          Sat
+                        </div>
+                        <div>
+                          Jul 24
+                        </div>
+                      </div>
+                      <div class="text-appointment-info">
+                        <div>
+                          Sun
+                        </div>
+                        <div>
+                          Jul 25
+                        </div>
+                      </div>
+                    </div>
+                    <!-- Next and previous buttons -->
+                    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                    <a class="next" onclick="plusSlides(1)">&#10095;</a>
+                  </div>
+                </div>
+              </div>
+
+              <button class="btn btn-lg btn-primary btn-block">
+                Confirm Appointment
+              </button>
+            </form>
+
+            <!-- Footer Section -->
+            <%- include("partials/footer"); -%>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <%- include("partials/scripts"); -%>
+  </body>
+</html>

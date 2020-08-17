@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <!-- Header Section -->
+  <%- include("partials/header"); -%>
+  <body>
+    <!-- Nabvar Section -->
+    <%- include("partials/navbar"); -%>
+
+    <div class="container">
+      <div class="pricing-header px-3 py-3 pt-md-5 pb-md-4 mx-auto text-center">
+        <h1 class="display-4">Register A New Customer</h1>
+        <p class="lead">
+          Please fill out a new customer's information below
+        </p>
+      </div>
+
+      <form action="#" method="post">
+        <div class="row register-new-customer">
+          <div class="col-lg-3 col-md-12">
+            <label for="firstname"><strong>First Name</strong></label>
+            <input class="form-control" name="firstname" type="text" required />
+          </div>
+          <div class="col-lg-3 col-md-12">
+            <label for="lastname"><strong>Last Name</strong></label>
+            <input class="form-control" name="lastname" type="text" required />
+          </div>
+          <div class="col-lg-6 col-md-12">
+            <label for="email"><strong>Email Address</strong></label>
+            <input
+              class="form-control"
+              type="email"
+              pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"
+              title="abcdefg@domain.com"
+              required
+            />
+          </div>
+        </div>
+        <button class="btn btn-primary form-control" type="submit">
+          Register
+        </button>
+      </form>
+
+      <!-- Footer Section -->
+      <%- include("partials/footer"); -%>
+    </div>
+
+    <%- include("partials/scripts"); -%>
+  </body>
+</html>

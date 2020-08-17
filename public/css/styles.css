@@ -1,0 +1,228 @@
+.brand-logo-span {
+  padding-left: 4px;
+}
+
+/* Appointment Scheduling Page */
+/* h5.card-title + input,
+label.btn-selection > input {
+  display: none;
+} */
+
+.btn-selection {
+  padding: 0;
+  margin: 0;
+  border: 1px solid transparent;
+}
+
+/* Appointment Page */
+div.table-responsive > table {
+  font-size: 12px;
+  text-align: center;
+}
+
+table th:nth-child(-n + 2),
+table td:nth-child(-n + 2),
+table th:nth-child(9),
+table td:nth-child(9) {
+  width: 80px;
+  min-width: 80px;
+  max-width: 90px;
+  word-wrap: break-word;
+}
+
+table th:nth-child(3),
+table td:nth-child(3),
+table th:nth-child(7),
+table td:nth-child(7) {
+  width: 140px;
+  min-width: 140px;
+  max-width: 150px;
+  word-wrap: break-word;
+}
+
+table th:nth-child(n + 4):nth-child(-n + 6),
+table td:nth-child(n + 4):nth-child(-n + 6),
+table th:nth-child(8),
+table td:nth-child(8) {
+  width: 150px;
+  min-width: 150px;
+  max-width: 200px;
+  word-wrap: break-word;
+}
+
+table.table > caption {
+  caption-side: top;
+  text-align: center;
+  font-size: 35px;
+  font-weight: 500;
+  color: black;
+}
+
+.modal-body-first-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-column-gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+div.modal-body-remaining > input,
+div.modal-body-remaining > select {
+  margin-bottom: 1rem;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+/* Slideshow container */
+.slideshow-container {
+  max-width: 800px;
+  position: relative;
+  margin: auto;
+}
+
+/* Hide the images by default */
+.mySlides {
+  display: none;
+  text-align: center;
+}
+
+/* Next & previous buttons */
+.prev,
+.next {
+  cursor: pointer;
+  position: absolute;
+  top: 0;
+  width: auto;
+  padding: 14px 4px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover,
+.next:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* Caption text */
+.text {
+  display: inline-block;
+  color: black;
+  font-size: 13px;
+  padding: 8px;
+  bottom: 8px;
+  text-align: center;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.text-appointment-info {
+  display: inline-block;
+  color: black;
+  font-size: 13px;
+  padding: 8px 4px;
+  text-align: center;
+  vertical-align: top;
+}
+
+.text-appointment-info a {
+  text-decoration: none;
+}
+
+div.appointment-info > label:nth-child(1) {
+  margin: 0;
+}
+
+div.appointment-info > label:nth-child(n + 2) {
+  margin: 1rem 0 0 0;
+}
+
+div.appointment-info > input:last-child {
+  margin-bottom: 1rem;
+}
+
+.wrapper {
+  position: relative;
+}
+
+form[id='appointment-form'] > div.row {
+  margin-bottom: 1rem;
+}
+
+.test {
+  color: black;
+  font-size: 11px;
+  width: 100%;
+  display: inline-block;
+  padding: 4px 3px 4px 3px;
+  background: lightblue;
+  margin-bottom: 8px;
+}
+
+.test:hover {
+  background-color: black;
+  color: white;
+  text-decoration: none;
+}
+div.register-new-customer,
+div.register-new-customer > div,
+.margin-bottom-1 {
+  margin-bottom: 1rem;
+}
+
+div.register-new-customer > div > label {
+  margin-bottom: 0;
+}
+
+/* The sidebar menu */
+.sidenav {
+  height: 100%; /* Full-height: remove this if you want "auto" height */
+  width: 160px; /* Set the width of the sidebar */
+  position: fixed; /* Fixed Sidebar (stay in place on scroll) */
+  z-index: 1; /* Stay on top */
+  left: 0;
+  overflow-x: hidden; /* Disable horizontal scroll */
+}
+
+/* The navigation menu links */
+.sidenav a {
+  padding: 6px 0 6px 16px;
+  text-decoration: none;
+  color: #111;
+  display: block;
+}
+
+/* When you mouse over the navigation links, change their color */
+.sidenav a:hover {
+  color: white;
+  background-color: black;
+}
+
+.active {
+  background: lightblue;
+}
+
+.setting-wrapper {
+  margin-left: 160px;
+}

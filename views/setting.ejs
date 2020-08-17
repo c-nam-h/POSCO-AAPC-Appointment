@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <!-- Header Section -->
+  <%- include("partials/header"); -%>
+  <body>
+    <!-- Nabvar Section -->
+    <%- include("partials/navbar-setting"); -%>
+
+    <!-- Sidebar Navigation -->
+    <div class="sidenav">
+      <a class="active" href="/setting">Home</a>
+      <a href="/setting-appointments">Appointments</a>
+      <a href="#">Announcement</a>
+    </div>
+
+    <div class="setting-wrapper">
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-lg-10 col-md-10">
+            <!-- Body Section -->
+            <div class="pricing-header px-3 mx-auto text-center">
+              <h1 class="display-4">Welcome, Namhyun!</h1>
+              <p class="lead">
+                You can manage Appointments, Users and Announcement in the
+                setting.
+              </p>
+            </div>
+            <!-- Footer Section -->
+            <%- include("partials/footer"); -%>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <%- include("partials/scripts"); -%>
+  </body>
+</html>

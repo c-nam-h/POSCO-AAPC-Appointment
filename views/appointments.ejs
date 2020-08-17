@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html lang="en">
+  <!-- Header Section -->
+  <%- include("partials/header"); -%>
+  <body>
+    <!-- Nabvar Section -->
+    <%- include("partials/navbar"); -%>
+
+    <!-- Modal -->
+    <div
+      class="modal fade"
+      id="modal1"
+      tabindex="-1"
+      role="dialog"
+      aria-labelledby="exampleModalLabel"
+      aria-hidden="true"
+    >
+      <form action="#" method="post">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalLabel">
+                Submit Appointment Information
+              </h5>
+              <button
+                type="button"
+                class="close"
+                data-dismiss="modal"
+                aria-label="Close"
+              >
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+              <div class="modal-body-first-row">
+                <div>
+                  <label for="category">Category</label>
+                  <select class="form-control" name="category" id="category">
+                    <option value="ar">AR</option>
+                    <option value="as">AS</option>
+                    <option value="sb">SB</option>
+                  </select>
+                </div>
+                <div>
+                  <label for="appointmentNumberButton">Appointment #</label>
+                  <button
+                    class="btn btn-light form-control"
+                    type="button"
+                    id="appointmentNumberButton"
+                  >
+                    Generate Appointment #
+                  </button>
+                </div>
+              </div>
+              <div class="modal-body-remaining">
+                <label for="releaseNumber">Release #</label>
+                <input class="form-control" type="text" />
+                <label for="destination">Destination</label>
+                <select
+                  class="form-control"
+                  name="destination"
+                  id="destination"
+                >
+                  <option value="poscoaapc">POSCO AAPC</option>
+                  <option value="mobileport">Port of Mobile</option>
+                  <option value="lg">LG</option>
+                </select>
+                <label for="carrier">Carrier</label>
+                <select class="form-control" name="carrier" id="carrier">
+                  <option value="ike">IKE Transportation</option>
+                  <option value="oi">O&I</option>
+                  <option value="mmx">MMX</option>
+                </select>
+                <label for="truckNumber">Truck #</label>
+                <input class="form-control" id="truckNumber" type="text" />
+              </div>
+            </div>
+            <div class="modal-footer">
+              <button
+                type="button"
+                class="btn btn-secondary"
+                data-dismiss="modal"
+              >
+                Close
+              </button>
+              <button type="submit" class="btn btn-primary">
+                Submit
+              </button>
+            </div>
+          </div>
+        </div>
+      </form>
+    </div>
+
+    <!-- Appointment Page Title -->
+    <div class="pricing-header px-3 py-3 pt-md-5 pb-md-4 mx-auto text-center">
+      <h1 class="display-4">Appointments</h1>
+      <% if (now) { %>
+      <p class="lead">
+        <%= now %>
+      </p>
+      <% } else { %>
+      <p class="lead">
+        <%= selectedDate %>
+      </p>
+      <% } %>
+    </div>
+
+    <!-- Slideshow Container -->
+    <div class="container">
+      <div class="slideshow-container">
+        <div class="mySlides">
+          <% for (var i = 13; 7 <= i; i--) { %>
+          <div class="text">
+            <a
+              href="/appointments/<%= daysOfTwoWeeks[i].getFullYear() %>-<%= daysOfTwoWeeks[i].getMonth() + 1 %>-<%= daysOfTwoWeeks[i].getDate() %>"
+            >
+              <div>
+                <%= daysOfTwoWeeks[i].toDateString().slice(0, 3) %>
+              </div>
+              <div>
+                <%= daysOfTwoWeeks[i].toDateString().slice(4, 7) %> <%=
+                daysOfTwoWeeks[i].getDate() %>
+              </div>
+            </a>
+          </div>
+          <% } %>
+        </div>
+        <div class="mySlides">
+          <% for (var i = 6; 0 <= i; i--) { %>
+          <div class="text">
+            <a href="#">
+              <div>
+                <%= daysOfTwoWeeks[i].toDateString().slice(0, 3) %>
+              </div>
+              <div>
+                <%= daysOfTwoWeeks[i].toDateString().slice(4, 7) %> <%=
+                daysOfTwoWeeks[i].getDate() %>
+              </div>
+            </a>
+          </div>
+          <% } %>
+        </div>
+
+        <!-- Next and previous buttons -->
+        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+        <a class="next" onclick="plusSlides(1)">&#10095;</a>
+      </div>
+    </div>
+
+    <br />
+
+    <!-- Appointment Tables -->
+    <div class="container-fluid">
+      <div class="table-responsive">
+        <table class="table table-hover">
+          <caption>
+            Section A
+          </caption>
+          <thead>
+            <tr>
+              <th scope="col">Time</th>
+              <th scope="col">Category</th>
+              <th scope="col">Appointment #</th>
+              <th scope="col">Release #</th>
+              <th scope="col">Destination</th>
+              <th scope="col">Carrier</th>
+              <th scope="col">Truck #</th>
+              <th scope="col">Remark</th>
+              <th scope="col">Bay</th>
+            </tr>
+          </thead>
+          <tbody>
+            <% for (var i = 0; i < appointmentTimesSectionA.length; i++) { %>
+            <tr>
+              <td>
+                <a href="#">
+                  <%= appointmentTimesSectionA[i] %>
+                </a>
+              </td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+            </tr>
+            <% } %>
+            <tr>
+              <td>
+                <a href="#" data-toggle="modal" data-target="#modal1">
+                  06:00AM
+                </a>
+              </td>
+              <td>
+                AR
+              </td>
+              <td>
+                12345
+              </td>
+              <td>
+                Port of Mobile - Test
+                123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890
+              </td>
+              <td>
+                POSCO AAPC
+              </td>
+              <td>
+                IKE Transportation
+              </td>
+              <td>
+                320
+              </td>
+              <td>
+                B00439 / 4 Coils
+              </td>
+              <td>
+                <select name="bay">
+                  <option value="a">A</option>
+                  <option value="pldc">PLD/C</option>
+                  <option value="d">D</option>
+                  <option value="ef">E/F</option>
+                  <option value="h">H</option>
+                </select>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="table-responsive">
+        <table class="table table-hover">
+          <caption>
+            Section A2
+          </caption>
+          <thead>
+            <tr>
+              <th scope="col">Time</th>
+              <th scope="col">Category</th>
+              <th scope="col">Appointment #</th>
+              <th scope="col">Release #</th>
+              <th scope="col">Destination</th>
+              <th scope="col">Carrier</th>
+              <th scope="col">Truck #</th>
+              <th scope="col">Remark</th>
+              <th scope="col">Bay</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Time</td>
+              <td>Category</td>
+              <td>Appointment #</td>
+              <td>Release #</td>
+              <td>Destination</td>
+              <td>Carrier</td>
+              <td>Truck #</td>
+              <td>Remark</td>
+              <td>Bay</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="table-responsive">
+        <table class="table table-hover">
+          <caption>
+            Section B
+          </caption>
+          <thead>
+            <tr>
+              <th scope="col">Time</th>
+              <th scope="col">Category</th>
+              <th scope="col">Appointment #</th>
+              <th scope="col">Release #</th>
+              <th scope="col">Destination</th>
+              <th scope="col">Carrier</th>
+              <th scope="col">Truck #</th>
+              <th scope="col">Remark</th>
+              <th scope="col">Bay</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Time</td>
+              <td>Category</td>
+              <td>Appointment #</td>
+              <td>Release #</td>
+              <td>Destination</td>
+              <td>Carrier</td>
+              <td>Truck #</td>
+              <td>Remark</td>
+              <td>Bay</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="table-responsive">
+        <table class="table table-hover">
+          <caption>
+            Section B2
+          </caption>
+          <thead>
+            <tr>
+              <th scope="col">Time</th>
+              <th scope="col">Category</th>
+              <th scope="col">Appointment #</th>
+              <th scope="col">Release #</th>
+              <th scope="col">Destination</th>
+              <th scope="col">Carrier</th>
+              <th scope="col">Truck #</th>
+              <th scope="col">Remark</th>
+              <th scope="col">Bay</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Time</td>
+              <td>Category</td>
+              <td>Appointment #</td>
+              <td>Release #</td>
+              <td>Destination</td>
+              <td>Carrier</td>
+              <td>Truck #</td>
+              <td>Remark</td>
+              <td>Bay</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="table-responsive">
+        <table class="table table-hover">
+          <caption>
+            Section C
+          </caption>
+          <thead>
+            <tr>
+              <th scope="col">Time</th>
+              <th scope="col">Category</th>
+              <th scope="col">Appointment #</th>
+              <th scope="col">Release #</th>
+              <th scope="col">Destination</th>
+              <th scope="col">Carrier</th>
+              <th scope="col">Truck #</th>
+              <th scope="col">Remark</th>
+              <th scope="col">Bay</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Time</td>
+              <td>Category</td>
+              <td>Appointment #</td>
+              <td>Release #</td>
+              <td>Destination</td>
+              <td>Carrier</td>
+              <td>Truck #</td>
+              <td>Remark</td>
+              <td>Bay</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="table-responsive">
+        <table class="table table-hover">
+          <caption>
+            Section C2
+          </caption>
+          <thead>
+            <tr>
+              <th scope="col">Time</th>
+              <th scope="col">Category</th>
+              <th scope="col">Appointment #</th>
+              <th scope="col">Release #</th>
+              <th scope="col">Destination</th>
+              <th scope="col">Carrier</th>
+              <th scope="col">Truck #</th>
+              <th scope="col">Remark</th>
+              <th scope="col">Bay</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Time</td>
+              <td>Category</td>
+              <td>Appointment #</td>
+              <td>Release #</td>
+              <td>Destination</td>
+              <td>Carrier</td>
+              <td>Truck #</td>
+              <td>Remark</td>
+              <td>Bay</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <!-- Footer Section -->
+    <div class="container">
+      <%- include("partials/footer"); -%>
+    </div>
+
+    <%- include("partials/scripts"); -%>
+  </body>
+</html>
